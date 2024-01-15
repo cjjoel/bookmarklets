@@ -6,11 +6,11 @@ Personal collection of bookmarklets
 
 Create bookmarks with the following code as URL,
 
-- For `1ft.io` bookmarklet
-```js
-javascript:location.href="https://1ft.io/"+location.href;
-```
-- For `archive.today` bookmarklet
-```js
-javascript:location.href="https://archive.today/"+location.href;
-```
+- For 1ft.io
+  ```js
+  javascript:location.href="https://1ft.io/"+location.href;
+  ```
+- For archive.today
+  ```js
+  javascript:location.href="https://archive.today/"+location.href;
+  ```
