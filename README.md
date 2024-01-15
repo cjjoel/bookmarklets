@@ -10,3 +10,7 @@ Create bookmarks with the following code as URL,
 ```js
 javascript:location.href="https://1ft.io/"+location.href;
 ```
+- For `archive.today` bookmarklet
+```js
+javascript:location.href="https://archive.today/"+location.href;
+```
