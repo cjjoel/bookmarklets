@@ -9,3 +9,5 @@ RUN cd /temp/dev && bun install --frozen-lockfile
 COPY . .
 
 USER bun
+
+ENTRYPOINT [ "bun", "run", "src/generate_readme.js" ]
