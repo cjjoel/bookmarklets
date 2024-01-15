@@ -1,15 +1,12 @@
-# bookmarklets
+# Bookmarklets
 
-To install dependencies:
+Personal collection of bookmarklets
 
-```bash
-bun install
+## Usage
+
+Create bookmarks with the following code as URL,
+
+- For `1ft.io` bookmarklet
+```js
+javascript:location.href="https://1ft.io/"+location.href;
 ```
-
-To run:
-
-```bash
-bun run index.js
-```
-
-This project was created using `bun init` in bun v1.0.22. [Bun](https://bun.sh) is a fast all-in-one JavaScript runtime.
