@@ -11,6 +11,11 @@
     "prettier": "3.2.2",
     "uglify-js": "^3.17.4"
   },
+  "scripts": {
+    "lint": "bun run eslint src",
+    "lint:fix": "bun run eslint --fix src",
+    "generate-readme": "bun run src/generate_readme.js"
+  },
   "peerDependencies": {
     "typescript": "^5.0.0"
   }
