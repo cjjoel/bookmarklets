@@ -30,3 +30,10 @@ Create bookmarks with the following code as URL,
   ```js
   javascript:location.href="https://downforeveryoneorjustme.com/"+location.hostname;
   ```
+
+## References
+
+* [GitHub - draktr/paywall_bypass_bookmarklets](https://github.com/draktr/paywall_bypass_bookmarklets)
+* [GitHub - ThomasOrlita/awesome-bookmarklets](https://github.com/ThomasOrlita/awesome-bookmarklets)
+* [GitHub - hariprasd/cool-bookmarklets](https://github.com/hariprasd/cool-bookmarklets)
+* [Bookmarklets](https://isqua.github.io/bookmarklets/)
