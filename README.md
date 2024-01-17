@@ -20,7 +20,7 @@ Create bookmarks with the following code as URL,
   ```
 - For copy-link
   ```js
-  javascript:try{navigator.clipboard.writeText(`[${document.title}](${location.href})`)}catch(t){window.alert(t)}
+  javascript:(()=>{try{navigator.clipboard.writeText(`[${document.title}](${location.href})`)}catch(t){window.alert(t)}})();
   ```
 - For is-it-down?
   ```js

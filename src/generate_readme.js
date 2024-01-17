@@ -1,6 +1,6 @@
 import { Glob } from "bun";
 import Mustache from "mustache";
-import UglifyJS from "uglify-js";
+import { minify } from "terser";
 
 const BOOKMARKLETS_DIR = "src/bookmarklets";
 const BOOKMARKLETS_TEMPLATE_PATH = "src/templates/bookmarklet.mustache";
@@ -23,7 +23,7 @@ const generateReadme = async () => {
       const text = await textPromise;
       const bookmarkletFile = Bun.file(`${BOOKMARKLETS_DIR}/${fileName}`);
       const bookmarklet = await bookmarkletFile.text();
-      const minifiedBookmarklet = UglifyJS.minify(bookmarklet);
+      const minifiedBookmarklet = await minify(bookmarklet);
       const view = {
         name: bookmarkletName(fileName),
         bookmarklet: minifiedBookmarklet.code

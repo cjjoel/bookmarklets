@@ -1,7 +1,6 @@
 {
   "name": "bookmarklets",
   "module": "index.js",
-  "type": "module",
   "devDependencies": {
     "@types/bun": "latest",
     "eslint": "8.56.0",
@@ -9,14 +8,15 @@
     "eslint-plugin-prettier": "^5.1.3",
     "mustache": "^4.2.0",
     "prettier": "3.2.2",
-    "uglify-js": "^3.17.4"
+    "terser": "^5.26.0"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
   },
   "scripts": {
     "lint": "bun run eslint src",
     "lint:fix": "bun run eslint --fix src",
     "generate-readme": "bun run src/generate_readme.js"
   },
-  "peerDependencies": {
-    "typescript": "^5.0.0"
-  }
+  "type": "module"
 }
