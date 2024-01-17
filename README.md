@@ -18,3 +18,7 @@ Create bookmarks with the following code as URL,
   ```js
   javascript:location.href="https://archive.today/"+location.href;
   ```
+- For hyperlink-copy
+  ```js
+  javascript:try{navigator.clipboard.writeText(`[${document.title}](${location.href})`)}catch(t){window.alert(t)}
+  ```
