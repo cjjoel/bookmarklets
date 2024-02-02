@@ -22,6 +22,10 @@ Create bookmarks with the following code as URL,
   ```js
   javascript:location.href="https://archive.today/"+location.href;
   ```
+- For debugger
+  ```js
+  javascript:(()=>{let e=1e3*prompt("debugger will be called in X seconds: ");const l=setInterval((()=>{if(e>0)console.log("debugger starting in "+e/1e3+" s..."),e-=1e3;else{debugger;clearInterval(l)}}),1e3)})();
+  ```
 - For copy-link
   ```js
   javascript:(()=>{try{navigator.clipboard.writeText(`[${document.title}](${location.href})`)}catch(t){window.alert(t)}})();

@@ -23,7 +23,9 @@ const generateReadme = async () => {
       const text = await textPromise;
       const bookmarkletFile = Bun.file(`${BOOKMARKLETS_DIR}/${fileName}`);
       const bookmarklet = await bookmarkletFile.text();
-      const minifiedBookmarklet = await minify(bookmarklet);
+      const minifiedBookmarklet = await minify(bookmarklet, {
+        compress: { drop_debugger: false }
+      });
       const view = {
         name: bookmarkletName(fileName),
         bookmarklet: minifiedBookmarklet.code
