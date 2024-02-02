@@ -22,9 +22,13 @@ Create bookmarks with the following code as URL,
   ```js
   javascript:location.href="https://archive.today/"+location.href;
   ```
+- For piped
+  ```js
+  javascript:location.hostname="piped.kavin.rocks";
+  ```
 - For debugger
   ```js
-  javascript:(()=>{let e=1e3*prompt("debugger will be called in X seconds: ");const l=setInterval((()=>{if(e>0)console.log("debugger starting in "+e/1e3+" s..."),e-=1e3;else{debugger;clearInterval(l)}}),1e3)})();
+  javascript:(()=>{try{const e=Number(prompt("Timeout in seconds:","0"))||0;setTimeout((()=>{debugger}),1e3*e)}catch(e){window.alert(e)}})();
   ```
 - For copy-link
   ```js
