@@ -7,6 +7,22 @@ Personal collection of bookmarklets
 Create bookmarks with the following code as URL,
 {{{bookmarkletUsageSection}}}
 
+## Development
+
+### Setup docker shell
+```bash
+docker build -t bookmarklets-image .
+
+docker run -it --rm -v ${PWD}:/app bookmarklets-image /bin/ash
+```
+
+### Linting and README generation
+```bash
+bun run lint:fix
+
+bun run generate-readme
+```
+
 ## References
 
 * [GitHub - draktr/paywall_bypass_bookmarklets](https://github.com/draktr/paywall_bypass_bookmarklets)
