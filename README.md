@@ -12,7 +12,7 @@ Create bookmarks with the following code as URL,
   ```
 - For randomEmail
   ```js
-  javascript:(()=>{const e=`joel_${Date.now()}@example.com`;navigator.clipboard.writeText(e)})();
+  javascript:(()=>{const e=`joel_${Date.now()}@example.com`;navigator.clipboard.writeText(e),alert(`Successfully copied ${e}`)})();
   ```
 - For archive.today
   ```js
@@ -42,6 +42,22 @@ Create bookmarks with the following code as URL,
   ```js
   javascript:location.href="https://web.archive.org/web/*/"+location.href;
   ```
+
+## Development
+
+### Setup docker shell
+```bash
+docker build -t bookmarklets-image .
+
+docker run -it --rm -v ${PWD}:/app bookmarklets-image /bin/ash
+```
+
+### Linting and README generation
+```bash
+bun run lint:fix
+
+bun run generate-readme
+```
 
 ## References
 
